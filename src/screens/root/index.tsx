@@ -4,7 +4,10 @@ export function RootPage() {
   return(
     <Wrapper 
       source={require('@/assets/images/background.png')}
-      resizeMode="cover"
+      resizeMode="contain"
+      imageStyle={{
+        marginBottom: 200
+      }}
     >
       <Content>
         <Title>
