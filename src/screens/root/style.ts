@@ -17,7 +17,7 @@ export const Content = styled(View)`
 
 export const Title = styled(Text)`
   font-size: 40px;
-  font-weight: 600;
+  font-family: 'Sora-SemiBold';
   text-align: center;
   padding: 0 25px;
   color: white;
@@ -25,6 +25,7 @@ export const Title = styled(Text)`
 
 export const Description = styled(Text)`
   font-size: 18px;
+  font-family: 'Sora-Regular';
   text-align: center;
   padding: 0 25px;
   margin-bottom: 15px;
@@ -43,6 +44,6 @@ export const Button = styled(TouchableOpacity)`
 
 export const TextButton = styled(Text)`
   font-size: 16px;
-  font-weight: 600;
+  font-family: 'Sora-SemiBold';
   color: white;
 `;
