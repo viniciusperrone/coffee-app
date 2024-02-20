@@ -1,4 +1,6 @@
+import { View, StatusBar } from "react-native";
 import { useFonts } from "expo-font";
+
 import { Loading } from "@/components/Loading";
 import { Routes } from "@/navigation/routes";
 
@@ -19,6 +21,13 @@ export default function App() {
   }
 
   return (
-    <Routes />
+    <>
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor="transparent"
+        translucent
+      />
+      <Routes />
+    </>
   );
 }
