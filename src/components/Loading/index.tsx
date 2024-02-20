@@ -1,11 +1,11 @@
-import { ActivityIndicatorBase } from "react-native";
+import { ActivityIndicator } from "react-native";
 
 import { Wrapper } from "./style";
 
 export function Loading() {
   return(
     <Wrapper>
-      <ActivityIndicatorBase 
+      <ActivityIndicator 
         color="#FFFFFF"
       />
     </Wrapper>
