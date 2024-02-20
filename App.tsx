@@ -1,6 +1,6 @@
 import { useFonts } from "expo-font";
-import { RootPage } from '@/screens/root';
 import { Loading } from "@/components/Loading";
+import { Routes } from "@/navigation/routes";
 
 export default function App() {
   const [fontLoaded] = useFonts({
@@ -19,6 +19,6 @@ export default function App() {
   }
 
   return (
-    <RootPage />
+    <Routes />
   );
 }
