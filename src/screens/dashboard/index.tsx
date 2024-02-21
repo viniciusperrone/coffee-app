@@ -12,6 +12,7 @@ import {
   styles 
 } from "./style";
 import { SearchInput } from '@/components/SearchInput';
+import { PromoCard } from '@/components/PromoCard';
 
 export function Dashboard() {
   return(
@@ -45,6 +46,7 @@ export function Dashboard() {
         </Header>
         <Body>
           <SearchInput />
+          <PromoCard />
         </Body>
       </ContentWrapper>
     </Wrapper>

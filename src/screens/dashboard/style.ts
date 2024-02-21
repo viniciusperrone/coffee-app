@@ -52,6 +52,7 @@ export const HeaderSubtitle = styled(Text)`
 export const Body = styled(View)`
   flex: 1;
   padding-top: 30px;
+  gap: 30px;
 `;
 
 export const styles = StyleSheet.create({
