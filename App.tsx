@@ -1,4 +1,4 @@
-import { View, StatusBar } from "react-native";
+import { StatusBar } from "react-native";
 import { useFonts } from "expo-font";
 
 import { Loading } from "@/components/Loading";
@@ -27,7 +27,9 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      <Routes />
+      {/* <SafeAreaView> */}
+        <Routes />
+      {/* </SafeAreaView> */}
     </>
   );
 }

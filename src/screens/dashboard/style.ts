@@ -1,39 +1,58 @@
-import { View, Text, StyleSheet } from "react-native";
+import { 
+  SafeAreaView, 
+  View,
+  Text,
+  Image, 
+  StyleSheet 
+} from "react-native";
 import styled from "styled-components/native";
 
-export const Wrapper = styled(View)`
+export const Wrapper = styled(SafeAreaView)`
   flex: 1;
   background-color: white;
 `;
 
 export const ContentWrapper = styled(View)`
-  position: absolute;
-  top: 0;
   flex: 1;
-  background-color: red;
-  /* z-index: -1; */
+  position: relative;
+  top: 0;
+  padding-top: 30px;
+  gap: 10px;
+  z-index: -1;
 `;
 
 export const Header = styled(View)`
   width: 100%;
+  padding-horizontal: 30px;
+  flex-direction: row;
+  justify-content: space-between;
 `;
 
-export const WrapperLeftHeader= styled(View)`
-  width: 100%;
-`;
+export const WrapperLeftHeader= styled(View)``;
 
 export const HeaderTitle = styled(Text)`
-  font-size: 12px;
+  font-size: 14px;
+  font-family: 'Sora-Regular';
+  color: #B7B7B7;
   /* color: #; */
 `;
 
+export const Avatar = styled(Image)`
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+`;
+
 export const HeaderSubtitle = styled(Text)`
-  width: 100%;
+  font-size: 18px;
+  font-family: 'Sora-SemiBold';
+  color: #DDDDDD;
 `;
 
 export const styles = StyleSheet.create({
   backgroundGradient: {
-    // position: 'absolute',
+    position: 'absolute',
+    backgroundColor: 'red',
     zIndex: -1,
     left: 0,
     top: 0,

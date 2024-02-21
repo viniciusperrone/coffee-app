@@ -7,6 +7,7 @@ import {
   WrapperLeftHeader,
   HeaderTitle,
   HeaderSubtitle,
+  Avatar,
   styles 
 } from "./style";
 
@@ -35,6 +36,10 @@ export function Dashboard() {
               Bilzen, Tanjungbalai
             </HeaderSubtitle>
           </WrapperLeftHeader>
+
+          <Avatar 
+            source={require("@/assets/images/avatar.png")}
+          />
         </Header>
       </ContentWrapper>
     </Wrapper>
