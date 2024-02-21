@@ -1,6 +1,12 @@
+import { useNavigation } from "@react-navigation/native";
+
+import { StackNavigation } from "@/navigation/stack.routes";
+
 import { Wrapper, Content, Title, Description, Button, TextButton } from "./style";
 
 export function RootPage() {
+  const navigation = useNavigation<StackNavigation>();
+
   return(
     <Wrapper 
       source={require('@/assets/images/background.png')}
@@ -19,7 +25,10 @@ export function RootPage() {
           The best grain, the finest roast, the 
           powerful flavor.
         </Description>
-        <Button activeOpacity={0.9}>
+        <Button 
+          activeOpacity={0.9}
+          onPress={() => navigation.navigate("dashboard")}
+        >
           <TextButton>
             Get Started
           </TextButton>
