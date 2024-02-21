@@ -7,9 +7,11 @@ import {
 } from "react-native";
 import styled from "styled-components/native";
 
+import { TCategory } from "@/types/category";
+
 export const Wrapper = styled(SafeAreaView)`
   flex: 1;
-  background-color: white;
+  background-color: #F9F9F9;
 `;
 
 export const ContentWrapper = styled(View)`

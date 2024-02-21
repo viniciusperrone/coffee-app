@@ -1,3 +1,6 @@
+import { useState } from "react";
+import { FlatList } from "react-native";
+
 import { LinearGradient } from 'expo-linear-gradient';
 
 import { 
@@ -11,10 +14,18 @@ import {
   Body,
   styles 
 } from "./style";
+
 import { SearchInput } from '@/components/SearchInput';
 import { PromoCard } from '@/components/PromoCard';
 
+import { _categories } from "@/_mocks/categories";
+import { CategoryNav } from "@/components/CategoryNav";
+
+const DEFAULT_CATEGORY_SELECTED = _categories[0].name;
+
 export function Dashboard() {
+  const [category, setCategory] = useState<string>(DEFAULT_CATEGORY_SELECTED);
+
   return(
     <Wrapper>
       <LinearGradient 
@@ -47,6 +58,20 @@ export function Dashboard() {
         <Body>
           <SearchInput />
           <PromoCard />
+          <FlatList
+            data={_categories}
+            renderItem={({ item }) => (
+              <CategoryNav 
+                key={item.id}
+                {...item}
+              />
+            )}
+            contentContainerStyle={{
+              paddingHorizontal: 30,
+              gap: 20
+            }}
+            horizontal
+          />
         </Body>
       </ContentWrapper>
     </Wrapper>
