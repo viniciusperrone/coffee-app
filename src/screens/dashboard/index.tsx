@@ -8,8 +8,10 @@ import {
   HeaderTitle,
   HeaderSubtitle,
   Avatar,
+  Body,
   styles 
 } from "./style";
+import { SearchInput } from '@/components/SearchInput';
 
 export function Dashboard() {
   return(
@@ -41,6 +43,9 @@ export function Dashboard() {
             source={require("@/assets/images/avatar.png")}
           />
         </Header>
+        <Body>
+          <SearchInput />
+        </Body>
       </ContentWrapper>
     </Wrapper>
   )
