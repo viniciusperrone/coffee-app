@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FlatList } from "react-native";
+import { FlatList, ScrollView } from "react-native";
 
 import { LinearGradient } from 'expo-linear-gradient';
 
@@ -17,9 +17,10 @@ import {
 
 import { SearchInput } from '@/components/SearchInput';
 import { PromoCard } from '@/components/PromoCard';
+import { CategoryNav } from "@/components/CategoryNav";
+import { CardProduct } from "@/components/CardProduct";
 
 import { _categories } from "@/_mocks/categories";
-import { CategoryNav } from "@/components/CategoryNav";
 
 const DEFAULT_CATEGORY_SELECTED = _categories[0].name;
 
@@ -66,12 +67,29 @@ export function Dashboard() {
                 {...item}
               />
             )}
+            style={{
+              minHeight: 48,
+            }}
             contentContainerStyle={{
               paddingHorizontal: 30,
               gap: 20
             }}
             horizontal
           />
+
+          <ScrollView
+            contentContainerStyle={{
+              flexDirection: 'row',
+              flexWrap: 'wrap',
+              paddingHorizontal: 30,
+              gap: 10,
+            }}
+            showsVerticalScrollIndicator={false}
+          >
+            {
+              Array.from({ length: 8}).map((_) => <CardProduct />)
+            }
+          </ScrollView>
         </Body>
       </ContentWrapper>
     </Wrapper>

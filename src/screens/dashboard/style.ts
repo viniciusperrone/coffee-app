@@ -60,7 +60,6 @@ export const Body = styled(View)`
 export const styles = StyleSheet.create({
   backgroundGradient: {
     position: 'absolute',
-    backgroundColor: 'red',
     zIndex: -1,
     left: 0,
     top: 0,
