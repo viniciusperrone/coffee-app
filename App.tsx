@@ -27,9 +27,7 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      {/* <SafeAreaView> */}
-        <Routes />
-      {/* </SafeAreaView> */}
+      <Routes />
     </>
   );
 }
