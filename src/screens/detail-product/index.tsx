@@ -69,6 +69,11 @@ export function DetailProduct() {
 
         <Heading>Description</Heading>
 
+        <SubHeading>
+          A cappuccino is an approximately 150 ml (5 oz) beverage, with 25 ml 
+          of espresso coffee and 85ml of fresh milk the fo.. Read More
+        </SubHeading>
+        
         <Heading>Size</Heading>
 
         <Row
