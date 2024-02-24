@@ -10,6 +10,7 @@ import { NotificationIcon } from "@/assets/icons/tabs/notification";
 import { DashboardStackRoutes } from "./dashboard-stack.routes";
 import { Favorites } from "@/screens/favorites";
 import { Cart } from "@/screens/cart";
+import { Notifications } from "@/screens/notifications";
 
 const Tab = createBottomTabNavigator();
 
@@ -84,7 +85,7 @@ export function TabsRoutes() {
       />
       <Tab.Screen 
         name="notifications"
-        component={Dashboard}
+        component={Notifications}
         options={{
           tabBarShowLabel: false,
           tabBarIcon: ({ focused }) => (
