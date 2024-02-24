@@ -21,17 +21,6 @@ export function DashboardStackRoutes() {
       <Stack.Screen
         name="detail-product"
         component={DetailProduct}
-        options={{
-          header: ({ navigation }) => (
-            <Header 
-              title="Detail"
-              onBack={() => navigation.goBack()}
-              rightComponent={<HearcIcon />}
-            />
-          ),
-          headerShown: true,
-          headerBackTitleVisible: false
-        }}
       />
     </Stack.Navigator>
   )

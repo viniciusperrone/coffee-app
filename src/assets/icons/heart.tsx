@@ -6,7 +6,7 @@ type IconProps = {
   fill?: string;
 };
 
-export function HearcIcon({ width = 22, height = 20, fill = 'none' }: IconProps) {
+export function HeartIcon({ width = 22, height = 20, fill = 'none' }: IconProps) {
   return(
     <Svg 
       width={width} 
