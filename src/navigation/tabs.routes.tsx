@@ -28,9 +28,6 @@ export function TabsRoutes() {
 
   return(
     <Tab.Navigator
-      sceneContainerStyle={{
-        backgroundColor: 'transparent'
-      }}
       screenOptions={{ 
         headerShown: false,
         tabBarStyle: tabBarStyle.tabWrapper
@@ -103,7 +100,7 @@ export function TabsRoutes() {
 
 const tabBarStyle = StyleSheet.create({
   tabWrapper: {
-    borderRadius: 16,
+    borderRadius: 24,
     backgroundColor: 'white'
   },
   tabScreen: {

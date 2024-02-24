@@ -7,11 +7,21 @@ export type ScreenNames = ["home", "dashboard"]
 export type RootStackParamList = Record<ScreenNames[number], undefined>;
 export type StackNavigation = NavigationProp<RootStackParamList>;
 
-
 export function Routes() {
   return(
-    <NavigationContainer fallback={<Loading />}>
+    <NavigationContainer 
+      theme={navigationTheme as any}
+      fallback={<Loading />}
+    >
       <StackRoutes />
     </NavigationContainer>
   )
 }
+
+const navigationTheme = {
+  dark: true,
+  colors: {
+    border: 'transparent',
+    background: "#F9F9F9",
+  },
+};
