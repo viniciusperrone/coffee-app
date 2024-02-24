@@ -1,3 +1,5 @@
+import { PressableProps } from "react-native";
+
 import { StartIcon } from "@/assets/icons/star";
 import { 
   Wrapper, 
@@ -13,9 +15,9 @@ import {
 } from "./style";
 import { PlusIcon } from "@/assets/icons/plus";
 
-export function CardProduct() {
+export function CardProduct({ ...rest }: PressableProps) {
   return(
-    <Wrapper>
+    <Wrapper {...rest}>
       <CoverContent
         source={require("@/assets/images/coffee-cappucino.png")}
         resizeMode="cover"

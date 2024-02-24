@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { View, Text, Pressable, ImageBackground, Dimensions } from "react-native";
 
-export const Wrapper = styled(View)`
+export const Wrapper = styled(Pressable)`
   width: ${() => (Dimensions.get("window").width - 70) / 2};
   min-height: 240px;
   background-color: white;

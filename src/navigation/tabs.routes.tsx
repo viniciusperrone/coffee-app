@@ -7,6 +7,7 @@ import { HomeIcon } from "@/assets/icons/tabs/home";
 import { HeartIcon } from "@/assets/icons/tabs/heart";
 import { BagIcon } from "@/assets/icons/tabs/bag";
 import { NotificationIcon } from "@/assets/icons/tabs/notification";
+import { DashboardStackRoutes } from "./dashboard-stack.routes";
 
 const Tab = createBottomTabNavigator();
 
@@ -36,7 +37,7 @@ export function TabsRoutes() {
     >
       <Tab.Screen 
         name="dashboard"
-        component={Dashboard}
+        component={DashboardStackRoutes}
         options={{
           tabBarShowLabel: false,
           tabBarIcon: ({ focused }) => (

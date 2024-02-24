@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FlatList, ScrollView } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 import { LinearGradient } from 'expo-linear-gradient';
 
@@ -21,11 +22,13 @@ import { CategoryNav } from "@/components/CategoryNav";
 import { CardProduct } from "@/components/CardProduct";
 
 import { _categories } from "@/_mocks/categories";
+import { StackNavigation } from "@/navigation/routes";
 
 const DEFAULT_CATEGORY_SELECTED = _categories[0].name;
 
 export function Dashboard() {
   const [category, setCategory] = useState<string>(DEFAULT_CATEGORY_SELECTED);
+  const navigation = useNavigation<StackNavigation>();
 
   return(
     <Wrapper>
@@ -87,7 +90,7 @@ export function Dashboard() {
             showsVerticalScrollIndicator={false}
           >
             {
-              Array.from({ length: 8}).map((_) => <CardProduct />)
+              Array.from({ length: 8}).map((_) => <CardProduct onPress={() => navigation.navigate("detail-product")}/>)
             }
           </ScrollView>
         </Body>
