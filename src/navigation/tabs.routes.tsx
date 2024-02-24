@@ -8,6 +8,7 @@ import { HeartIcon } from "@/assets/icons/tabs/heart";
 import { BagIcon } from "@/assets/icons/tabs/bag";
 import { NotificationIcon } from "@/assets/icons/tabs/notification";
 import { DashboardStackRoutes } from "./dashboard-stack.routes";
+import { Favorites } from "@/screens/favorites";
 
 const Tab = createBottomTabNavigator();
 
@@ -51,8 +52,8 @@ export function TabsRoutes() {
         }}
       />
       <Tab.Screen 
-        name="actions"
-        component={Dashboard}
+        name="favorites"
+        component={Favorites}
         options={{
           tabBarShowLabel: false,
           tabBarIcon: ({ focused }) => (
