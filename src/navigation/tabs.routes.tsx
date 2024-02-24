@@ -9,6 +9,7 @@ import { BagIcon } from "@/assets/icons/tabs/bag";
 import { NotificationIcon } from "@/assets/icons/tabs/notification";
 import { DashboardStackRoutes } from "./dashboard-stack.routes";
 import { Favorites } from "@/screens/favorites";
+import { Cart } from "@/screens/cart";
 
 const Tab = createBottomTabNavigator();
 
@@ -68,7 +69,7 @@ export function TabsRoutes() {
       />
       <Tab.Screen 
         name="cart"
-        component={Dashboard}
+        component={Cart}
         options={{
           tabBarShowLabel: false,
           tabBarIcon: ({ focused }) => (
