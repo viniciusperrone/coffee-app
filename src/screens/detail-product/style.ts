@@ -2,10 +2,10 @@ import styled from "styled-components/native";
 import { 
   View, 
   ImageBackground, 
+  Image as SquareImage, 
   Dimensions, 
   Text,
-  Pressable,
-  TouchableOpacity
+  Pressable
 } from "react-native";
 
 // ----------------------------------------------------------------------
@@ -18,6 +18,7 @@ type SizeButtonProps = {
 
 export const Wrapper = styled(View)`
   flex: 1;
+  background-color: white;
 `;
 
 export const Content = styled(View)`
@@ -54,6 +55,20 @@ export const Divider = styled(View)`
 export const Row = styled(View)`
   flex-direction: row;
   align-items: center;
+`;
+
+export const Square = styled(View)`
+  width: 48px;
+  height: 48px;
+  background-color: #F9F9F9;
+  border-radius: 14px;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const SquareIcon = styled(SquareImage)`
+  width: 24px;
+  height: 24px;
 `;
 
 export const SizeButton = styled(Pressable)<SizeButtonProps>`

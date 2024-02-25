@@ -15,9 +15,13 @@ import {
   Divider,
   Row,
   SizeButton,
-  SizeButtonText
+  SizeButtonText,
+  Square,
+  SquareIcon
 } from "./style";
 import { StartIcon } from "@/assets/icons/star";
+import { GranIcon } from "@/assets/icons/grain";
+import { MilkIcon } from "@/assets/icons/milk";
 
 export function DetailProduct() {
   const favorite = useBoolean();
@@ -64,6 +68,23 @@ export function DetailProduct() {
           <Heading>4.8</Heading>
 
           <SubHeading style={{ marginTop: 2, fontFamily: 'Sora-SemiBold' }}>(230)</SubHeading>
+
+          <Row style={{ 
+            flex: 1, 
+            justifyContent: 'flex-end',
+            gap: 10
+          }}>
+            <Square>
+              <SquareIcon 
+                source={require("@/assets/images/grain.png")}
+              />
+            </Square>
+            <Square>
+              <SquareIcon
+                source={require("@/assets/images/milk.png")}
+              />
+            </Square>
+          </Row>
         </Row>
         <Divider />
 
