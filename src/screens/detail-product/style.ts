@@ -1,6 +1,7 @@
 import styled from "styled-components/native";
 import { 
-  View, 
+  View,
+  ScrollView,
   ImageBackground, 
   Image as SquareImage, 
   Dimensions, 
@@ -21,12 +22,14 @@ export const Wrapper = styled(View)`
   background-color: white;
 `;
 
-export const Content = styled(View)`
-  flex: 1;
-  padding-vertical: 30px;
-  padding-horizontal: 30px;
-  gap: 15px;
-`;
+export const Content = styled(ScrollView).attrs({
+  showsVerticalScrollIndicator: false,
+  contentContainerStyle: {
+    paddingHorizontal: 30,
+    paddingVertical: 30,
+    gap: 15
+  },
+})``;
 
 export const Title = styled(Text)`
   font-size: 24px;

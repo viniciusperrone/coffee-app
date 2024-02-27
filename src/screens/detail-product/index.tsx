@@ -1,9 +1,14 @@
+import { useRef, useMemo, useCallback } from "react";
+
 import { useNavigation } from "@react-navigation/native";
+import { useBottomTabBarHeight,  } from "@react-navigation/bottom-tabs";
+import { BottomSheetModalProvider, BottomSheetModal } from "@gorhom/bottom-sheet";
 
 import { Header } from "@/components/Header";
-import { HeartIcon } from "@/assets/icons/heart";
 import { StackNavigation } from "@/navigation/routes";
 import { useBoolean } from "@/hooks/use-boolean";
+import { HeartIcon } from "@/assets/icons/heart";
+import { StartIcon } from "@/assets/icons/star";
 
 import { 
   Wrapper, 
@@ -19,13 +24,15 @@ import {
   Square,
   SquareIcon
 } from "./style";
-import { StartIcon } from "@/assets/icons/star";
-import { GranIcon } from "@/assets/icons/grain";
-import { MilkIcon } from "@/assets/icons/milk";
 
 export function DetailProduct() {
   const favorite = useBoolean();
   const navigate = useNavigation<StackNavigation>();
+  const bottomSheetModalRef = useRef<BottomSheetModal>(null);
+  const snapPoints = useMemo(() => ['25%', '50%'], []);
+  const handleSheetChanges = useCallback((index: number) => {
+    console.log('handleSheetChanges', index);
+  }, []);
 
   return(
     <Wrapper>
@@ -119,8 +126,10 @@ export function DetailProduct() {
           </SizeButton>
         </Row>
 
+        <BottomSheetModal>
+          
+        </BottomSheetModal>
       </Content>
-
     </Wrapper>
   )
 }

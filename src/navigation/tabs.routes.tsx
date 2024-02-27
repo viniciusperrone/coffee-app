@@ -2,7 +2,6 @@ import { View, StyleSheet } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import { Dashboard } from "@/screens/dashboard";
 import { HomeIcon } from "@/assets/icons/tabs/home";
 import { HeartIcon } from "@/assets/icons/tabs/heart";
 import { BagIcon } from "@/assets/icons/tabs/bag";
