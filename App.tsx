@@ -5,7 +5,6 @@ import { useFonts } from "expo-font";
 
 import { Loading } from "@/components/Loading";
 import { Routes } from "@/navigation/routes";
-import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
 
 export default function App() {
   const [fontLoaded] = useFonts({
@@ -25,14 +24,12 @@ export default function App() {
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <BottomSheetModalProvider>
-        <StatusBar
-          barStyle="default"
-          backgroundColor="transparent"
-          translucent
-        />
-        <Routes />
-      </BottomSheetModalProvider>
+      <StatusBar
+        barStyle="default"
+        backgroundColor="transparent"
+        translucent
+      />
+      <Routes />
     </GestureHandlerRootView>
   );
 }

@@ -6,8 +6,10 @@ import {
   Image as SquareImage, 
   Dimensions, 
   Text,
-  Pressable
+  Pressable,
+  TouchableOpacity
 } from "react-native";
+import { Modalize } from "react-native-modalize";
 
 // ----------------------------------------------------------------------
 
@@ -19,16 +21,11 @@ type SizeButtonProps = {
 
 export const Wrapper = styled(View)`
   flex: 1;
-  background-color: white;
+  background-color: #FBFBFB;
 `;
 
 export const Content = styled(ScrollView).attrs({
-  showsVerticalScrollIndicator: false,
-  contentContainerStyle: {
-    paddingHorizontal: 30,
-    paddingVertical: 30,
-    gap: 15
-  },
+  showsVerticalScrollIndicator: false
 })``;
 
 export const Title = styled(Text)`
@@ -58,6 +55,10 @@ export const Divider = styled(View)`
 export const Row = styled(View)`
   flex-direction: row;
   align-items: center;
+`;
+
+export const Column = styled(View)`
+  flex-direction: column;
 `;
 
 export const Square = styled(View)`
@@ -96,4 +97,45 @@ export const Image = styled(ImageBackground)`
   width: ${Dimensions.get("window").width - 60};
   height: 226px;
   align-self: center;
+`;
+
+export const BottomSheet = styled(View)`
+  width: 100%;
+  /* height: 80px; */
+  margin-top: 10px;
+  bottom: 0;
+  background-color: white;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+  padding-horizontal: 30px;
+  padding-vertical: 30px;
+`;
+
+export const BottomSheetTitle = styled(Text)`
+  font-size: 14px;
+  font-family: 'Sora-Regular';
+  color: #9B9B9B;
+`;
+
+export const BottomSheetSubtitle = styled(Text)`
+  font-size: 18px;
+  font-family: 'Sora-SemiBold';
+  color: #C67C4E;
+`;
+
+export const BottomSheetButton = styled(TouchableOpacity).attrs({
+  activeOpacity: 0.7
+})`
+  width: 70%;
+  height: 60px;
+  border-radius: 16px;
+  background-color: #C67C4E;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const BottomSheetTextButton = styled(Text)`
+  font-size: 16px;
+  font-family: 'Sora-SemiBold';
+  color: white;
 `;
