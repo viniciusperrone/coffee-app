@@ -1,9 +1,10 @@
-import { NavigationProp } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { RootPage } from "@/screens/root";
 import { TabsRoutes } from "./tabs.routes";
 import { DetailProduct } from "@/screens/detail-product";
+
+// ----------------------------------------------------------------------
 
 const Stack = createNativeStackNavigator();
 

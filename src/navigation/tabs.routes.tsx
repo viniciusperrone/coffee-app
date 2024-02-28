@@ -11,6 +11,8 @@ import { Cart } from "@/screens/cart";
 import { Notifications } from "@/screens/notifications";
 import { Dashboard } from "@/screens/dashboard";
 
+// ----------------------------------------------------------------------
+
 const Tab = createBottomTabNavigator();
 
 export function TabsRoutes() {
