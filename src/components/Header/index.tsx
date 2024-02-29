@@ -4,12 +4,16 @@ import Icon from "react-native-vector-icons/MaterialIcons";
 
 import { Wrapper, Title } from "./style";
 
+// ----------------------------------------------------------------------
+
 type HeaderProps = {
   title: string;
   onBack: () => void;
   rightComponent?: ReactNode;
   onAction?: () => void;
 };
+
+// ----------------------------------------------------------------------
 
 export function Header({ 
   title, 
@@ -24,7 +28,10 @@ export function Header({
   )
   
   const renderRightComponent = (
-    <TouchableOpacity onPress={onAction}>
+    <TouchableOpacity 
+      onPress={onAction}
+      style={{ width: 24 }}
+    >
       {rightComponent}
     </TouchableOpacity>
   )
@@ -36,7 +43,7 @@ export function Header({
         <Title>
           {title}
         </Title>
-        {rightComponent && renderRightComponent}
+        {renderRightComponent}
       </Wrapper>
     </SafeAreaView>
   )
