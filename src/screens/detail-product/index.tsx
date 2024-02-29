@@ -151,7 +151,8 @@ export function DetailProduct() {
           >
             <Column 
               style={{
-                alignItems: 'flex-start'
+                justifyContent: 'center',
+                alignItems: 'center'
               }}
             >
               <BottomSheetTitle>

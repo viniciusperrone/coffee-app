@@ -101,14 +101,13 @@ export const Image = styled(ImageBackground)`
 
 export const BottomSheet = styled(View)`
   width: 100%;
-  /* height: 80px; */
-  margin-top: 10px;
   bottom: 0;
   background-color: white;
   border-top-right-radius: 16px;
   border-top-left-radius: 16px;
   padding-horizontal: 30px;
-  padding-vertical: 30px;
+  padding-top: 20px;
+  padding-bottom: 30px;
 `;
 
 export const BottomSheetTitle = styled(Text)`
