@@ -1,7 +1,5 @@
 import { useRef, useEffect } from "react"
-
 import { useNavigation } from "@react-navigation/native";
-import { Modalize } from "react-native-modalize";
 
 import { Header } from "@/components/Header";
 import { StackNavigation } from "@/navigation/routes";
@@ -30,25 +28,17 @@ import {
   BottomSheetTextButton
 } from "./style";
 
+// ----------------------------------------------------------------------
+
 export function DetailProduct() {
   const favorite = useBoolean();
-  const navigate = useNavigation<StackNavigation>();
-
-  const modalizeRef = useRef<Modalize>(null);
-
-  const onOpen = () => {
-    modalizeRef.current?.open();
-  };
-
-  useEffect(() => {
-    onOpen();
-  }, [modalizeRef]);
+  const navigation = useNavigation<StackNavigation>();
 
   return(
     <Wrapper>
       <Header 
         title="Detail"
-        onBack={navigate.goBack}
+        onBack={navigation.goBack}
         rightComponent={(
           <HeartIcon 
             fill={favorite.value ? "#FF6961" : "none"}
@@ -162,7 +152,7 @@ export function DetailProduct() {
                 $ 4.53
               </BottomSheetSubtitle>
             </Column>
-            <BottomSheetButton>
+            <BottomSheetButton onPress={() => navigation.navigate("order")}>
               <BottomSheetTextButton>
                 Buy Now
               </BottomSheetTextButton>

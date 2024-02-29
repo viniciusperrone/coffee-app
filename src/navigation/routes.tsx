@@ -5,7 +5,7 @@ import { StackRoutes } from "./stack.routes";
 
 // ----------------------------------------------------------------------
 
-export type ScreenNames = ["home", "dashboard", "detail-product"]
+export type ScreenNames = ["home", "dashboard", "detail-product", "order"];
 export type RootStackParamList = Record<ScreenNames[number], undefined>;
 export type StackNavigation = NavigationProp<RootStackParamList>;
 

@@ -3,7 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { RootPage } from "@/screens/root";
 import { TabsRoutes } from "./tabs.routes";
 import { DetailProduct } from "@/screens/detail-product";
-import { Header } from "@/components/Header";
+import { Order } from "@/screens/order";
 
 // ----------------------------------------------------------------------
 
@@ -23,6 +23,10 @@ export function StackRoutes() {
       <Stack.Screen
         name="detail-product"
         component={DetailProduct}
+      />
+      <Stack.Screen
+        name="order"
+        component={Order}
       />
     </Stack.Navigator>
   )
