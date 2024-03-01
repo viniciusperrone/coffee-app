@@ -9,7 +9,6 @@ import {
   Pressable,
   TouchableOpacity
 } from "react-native";
-import { Modalize } from "react-native-modalize";
 
 // ----------------------------------------------------------------------
 
