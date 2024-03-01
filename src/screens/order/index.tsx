@@ -12,8 +12,12 @@ import {
   Heading,
   SubHeading,
   NormalText,
-  LargeText
+  LargeText,
+  BottomSheet,
+  BottomSheetButton,
+  BottomSheetTextButton
 } from "./style";
+import { CashIcon } from "@/assets/icons/cash";
 
 // ----------------------------------------------------------------------
 
@@ -78,6 +82,18 @@ export function Order() {
             <LargeText>$ 5.53</LargeText>
           </Row>
         </Column>
+        <BottomSheet>
+          <Row>
+            <CashIcon 
+              
+            />
+          </Row>
+          <BottomSheetButton>
+            <BottomSheetTextButton>
+              Order
+            </BottomSheetTextButton>
+          </BottomSheetButton>
+        </BottomSheet>
       </Content>
     </Wrapper>
   )

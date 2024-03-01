@@ -1,4 +1,4 @@
-import { View, ScrollView, Dimensions, Text } from "react-native";
+import { View, ScrollView, Dimensions, Text, TouchableOpacity } from "react-native";
 
 import styled from "styled-components/native";
 
@@ -61,4 +61,44 @@ export const Divider = styled(View)`
   width: 100%;
   height: 1px;
   background-color: #EAEAEA;
+`;
+
+export const BottomSheet = styled(View)`
+  width: 100%;
+  background-color: white;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+  padding-horizontal: 30px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  gap: 15px;
+`;
+
+export const BottomSheetTitle = styled(Text)`
+  font-size: 14px;
+  font-family: 'Sora-Regular';
+  color: #9B9B9B;
+`;
+
+export const BottomSheetSubtitle = styled(Text)`
+  font-size: 18px;
+  font-family: 'Sora-SemiBold';
+  color: #C67C4E;
+`;
+
+export const BottomSheetButton = styled(TouchableOpacity).attrs({
+  activeOpacity: 0.7
+})`
+  width: 100%;
+  height: 60px;
+  border-radius: 16px;
+  background-color: #C67C4E;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const BottomSheetTextButton = styled(Text)`
+  font-size: 16px;
+  font-family: 'Sora-SemiBold';
+  color: white;
 `;
