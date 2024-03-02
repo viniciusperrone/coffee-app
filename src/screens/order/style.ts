@@ -1,4 +1,4 @@
-import { View, ScrollView, Dimensions, Text, TouchableOpacity } from "react-native";
+import { View, ScrollView, Dimensions, Text, TouchableOpacity, Pressable, ImageBackground } from "react-native";
 
 import styled from "styled-components/native";
 
@@ -167,4 +167,43 @@ export const DiscountText = styled(Text)`
   font-size: 18px;
   font-family: 'Sora-SemiBold';
   color: #2F2D2C;
+`;
+
+export const ItemOrderWrapper = styled(View)`
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const ItemOrderImage = styled(ImageBackground)`
+  width: 54px;
+  height: 54px;
+`;
+
+export const ItemOrderTitle = styled(Text)`
+  font-size: 20px;
+  font-family: 'Sora-SemiBold';
+  color: #2F2D2C;
+`;
+
+export const ItemOrderSubtitle = styled(Text)`
+  font-size: 16px;
+  font-family: 'Sora-Regular';
+  color: #9B9B9B;
+`;
+
+export const ItemOrderValueText = styled(Text)`
+  font-size: 18px;
+  font-family: 'Sora-SemiBold';
+  color: #2F2D2C;
+`;
+
+export const ItemOrderCircleButton = styled(Pressable)`
+  width: 28px;
+  height: 28px;
+  border: 1px solid #EAEAEA;
+  border-radius: 100%;
+  align-items: center;
+  justify-content: center;
 `;

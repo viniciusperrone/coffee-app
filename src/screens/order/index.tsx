@@ -1,5 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
-import Icon from "react-native-vector-icons/AntDesign"
+import AntDesign from "react-native-vector-icons/AntDesign";
+import Entypo from "react-native-vector-icons/Entypo";
 
 import { Header } from "@/components/Header";
 import { CashIcon } from "@/assets/icons/cash";
@@ -26,7 +27,13 @@ import {
   CashPriceText,
   CashPriceTextSecondary,
   Discount,
-  DiscountText
+  DiscountText,
+  ItemOrderWrapper,
+  ItemOrderImage,
+  ItemOrderTitle,
+  ItemOrderSubtitle,
+  ItemOrderCircleButton,
+  ItemOrderValueText
 } from "./style";
 
 // ----------------------------------------------------------------------
@@ -83,12 +90,14 @@ export function OrderPage() {
           style={{
             paddingHorizontal: 30,
             paddingTop: 30,
+            paddingBottom: 15,
             gap: 15
           }}
         >
           <Heading>Delivery Address</Heading>
           <SubHeading>Jl. Kpg Sutoyo</SubHeading>
           <Divider />
+          <Item />
         </Column>
         <DividerLarge />
         <Column
@@ -105,7 +114,7 @@ export function OrderPage() {
                   1 Discount is applied
                 </DiscountText>
               </Row>
-              <Icon name="right" size={22} />
+              <AntDesign name="right" size={22} />
             </Discount>
           <Heading>Payment Summary</Heading>
           <Row
@@ -143,5 +152,42 @@ export function OrderPage() {
       </Content>
       {renderBottomSheet}
     </Wrapper>
+  )
+}
+
+function Item() {
+  return(
+    <ItemOrderWrapper>
+      <Row style={{ gap: 15 }}>
+        <ItemOrderImage 
+          source={require("@/assets/images/coffee-cappucino.png")}
+          resizeMode="cover"
+          imageStyle={{
+            borderRadius: 12
+          }}
+        />
+        <Column style={{ justifyContent: 'center' }}>
+          <ItemOrderTitle>
+            Cappucino
+          </ItemOrderTitle>
+          <ItemOrderSubtitle>
+            with Chocolate
+          </ItemOrderSubtitle>
+        </Column>
+      </Row>
+      <Row style={{ alignItems: 'center', gap: 8 }}>
+        <ItemOrderCircleButton>
+          <AntDesign 
+            name="minus" 
+            size={15} 
+            color="#AAADB0"
+          />
+        </ItemOrderCircleButton>
+        <ItemOrderValueText>1</ItemOrderValueText>
+        <ItemOrderCircleButton>
+          <Entypo name="plus" size={15} />
+        </ItemOrderCircleButton>
+      </Row>
+    </ItemOrderWrapper>
   )
 }
