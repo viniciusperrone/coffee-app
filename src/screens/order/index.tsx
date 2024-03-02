@@ -29,6 +29,45 @@ import { CashIcon } from "@/assets/icons/cash";
 
 export function Order() {
   const navigation = useNavigation();
+
+  const renderBottomSheet = (
+    <BottomSheet>
+      <Row 
+        style={{ 
+          width: '100%',
+          justifyContent: 'space-between',
+          alignItems: 'center'
+        }}
+      >
+        <Row style={{ gap: 10, alignItems: 'center' }}>
+          <CashIcon />
+          <CashContainer>
+            <CashBox>
+              <CashPriceText>
+                Cash
+              </CashPriceText>
+            </CashBox>
+            <Row style={{ width: 62, justifyContent: 'center' }}>
+              <CashPriceTextSecondary>
+                $ 5.53
+              </CashPriceTextSecondary>
+            </Row>
+          </CashContainer>
+        </Row>
+        <DotsContainer>
+          <Dots />
+          <Dots />
+          <Dots />
+        </DotsContainer>
+      </Row>
+      <BottomSheetButton>
+        <BottomSheetTextButton>
+          Order
+        </BottomSheetTextButton>
+      </BottomSheetButton>
+    </BottomSheet>
+  );
+
   return(
     <Wrapper>
       <Header
@@ -88,42 +127,8 @@ export function Order() {
             <LargeText>$ 5.53</LargeText>
           </Row>
         </Column>
-        <BottomSheet>
-          <Row 
-            style={{ 
-              width: '100%',
-              justifyContent: 'space-between',
-              alignItems: 'center'
-            }}
-          >
-            <Row style={{ gap: 10, alignItems: 'center' }}>
-              <CashIcon />
-              <CashContainer>
-                <CashBox>
-                  <CashPriceText>
-                    Cash
-                  </CashPriceText>
-                </CashBox>
-                <Row style={{ width: 62, justifyContent: 'center' }}>
-                  <CashPriceTextSecondary>
-                    $ 5.53
-                  </CashPriceTextSecondary>
-                </Row>
-              </CashContainer>
-            </Row>
-            <DotsContainer>
-              <Dots />
-              <Dots />
-              <Dots />
-            </DotsContainer>
-          </Row>
-          <BottomSheetButton>
-            <BottomSheetTextButton>
-              Order
-            </BottomSheetTextButton>
-          </BottomSheetButton>
-        </BottomSheet>
       </Content>
+      {renderBottomSheet}
     </Wrapper>
   )
 }
