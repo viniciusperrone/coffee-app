@@ -1,10 +1,14 @@
 import Svg, { Path } from 'react-native-svg';
 
+// ----------------------------------------------------------------------
+
 type IconProps = {
   width?: string | number;
   height?: string | number;
   fill?: string;
 };
+
+// ----------------------------------------------------------------------
 
 export function CashIcon({ width = 24, height = 20, fill = '#C67C4E' }: IconProps) {
   return(

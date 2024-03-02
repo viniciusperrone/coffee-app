@@ -1,10 +1,14 @@
 import Svg, { Path } from 'react-native-svg';
 
+// ----------------------------------------------------------------------
+
 type IconProps = {
   width?: string | number;
   height?: string | number;
   fill?: string;
 };
+
+// ----------------------------------------------------------------------
 
 export function HeartIcon({ width = 22, height = 20, fill = 'none' }: IconProps) {
   return(

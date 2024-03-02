@@ -1,9 +1,13 @@
 import Svg, { Path } from 'react-native-svg';
 
+// ----------------------------------------------------------------------
+
 type TIcon = {
   width?: string | number;
   height?: string | number;
 };
+
+// ----------------------------------------------------------------------
 
 export function PlusIcon({ width = 16, height = 16 }: TIcon) {
   return(

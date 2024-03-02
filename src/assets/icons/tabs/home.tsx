@@ -1,10 +1,14 @@
 import Svg, { Path } from 'react-native-svg';
 
+// ----------------------------------------------------------------------
+
 type TIcon = {
   width?: string | number;
   height?: string | number;
   color?: string;
 };
+
+// ----------------------------------------------------------------------
 
 export function HomeIcon({ width = 20, height = 20, color = '#C67C4E' }: TIcon) {
   return(
