@@ -7,6 +7,8 @@ import {
   DescriptionText
 } from "./style";
 
+// ----------------------------------------------------------------------
+
 export function PromoCard() {
   return(
     <Wrapper 

@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 import { ImageBackground, View, Text, Dimensions } from "react-native";
 
+// ----------------------------------------------------------------------
+
 export const Wrapper = styled(ImageBackground)`
   width: ${() => Dimensions.get("window").width - 60};
   height: 160px;

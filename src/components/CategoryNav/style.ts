@@ -4,7 +4,11 @@ import { TouchableOpacity, Text } from "react-native";
 
 import { TCategory } from "@/types/category";
 
-type Props = Omit<TCategory, "id" | "name">
+// ----------------------------------------------------------------------
+
+type Props = Omit<TCategory, "id" | "name">;
+
+// ----------------------------------------------------------------------
 
 export const Button = styled(TouchableOpacity)<Props>`
   height: 48px;

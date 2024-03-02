@@ -1,8 +1,8 @@
-import { View } from "react-native";
-
 import { TCategory } from "@/types/category";
 
 import { Button, TextButton } from "./style";
+
+// ----------------------------------------------------------------------
 
 export function CategoryNav({ name, selected }: TCategory) {
   return(

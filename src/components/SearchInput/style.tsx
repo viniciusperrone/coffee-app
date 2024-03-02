@@ -7,6 +7,8 @@ import {
   TextInput
 } from "react-native";
 
+// ----------------------------------------------------------------------
+
 export const Container = styled(View)`
   align-self: center;
   width: ${() => Dimensions.get('window').width - 60};

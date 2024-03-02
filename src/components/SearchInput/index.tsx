@@ -7,6 +7,8 @@ import {
   Field,
 } from "./style";
 
+// ----------------------------------------------------------------------
+
 export function SearchInput() {
   return(
     <Container>

@@ -1,6 +1,8 @@
 import { PressableProps } from "react-native";
 
 import { StartIcon } from "@/assets/icons/star";
+import { PlusIcon } from "@/assets/icons/plus";
+
 import { 
   Wrapper, 
   CoverContent, 
@@ -13,7 +15,8 @@ import {
   Body,
   Footer,
 } from "./style";
-import { PlusIcon } from "@/assets/icons/plus";
+
+// ----------------------------------------------------------------------
 
 export function CardProduct({ ...rest }: PressableProps) {
   return(
