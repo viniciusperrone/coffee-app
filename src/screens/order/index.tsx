@@ -1,6 +1,9 @@
 import { useNavigation } from "@react-navigation/native";
+import Icon from "react-native-vector-icons/AntDesign"
 
 import { Header } from "@/components/Header";
+import { CashIcon } from "@/assets/icons/cash";
+import { DiscountIcon } from "@/assets/icons/discount";
 
 import { 
   Wrapper, 
@@ -21,9 +24,10 @@ import {
   CashContainer,
   CashBox,
   CashPriceText,
-  CashPriceTextSecondary
+  CashPriceTextSecondary,
+  Discount,
+  DiscountText
 } from "./style";
-import { CashIcon } from "@/assets/icons/cash";
 
 // ----------------------------------------------------------------------
 
@@ -94,6 +98,15 @@ export function OrderPage() {
             gap: 15
           }}
         >
+            <Discount>
+              <Row style={{ gap: 10 }}>
+                <DiscountIcon />
+                <DiscountText>
+                  1 Discount is applied
+                </DiscountText>
+              </Row>
+              <Icon name="right" size={22} />
+            </Discount>
           <Heading>Payment Summary</Heading>
           <Row
             style={{

@@ -149,3 +149,22 @@ export const CashPriceTextSecondary = styled(Text)`
   font-family: 'Sora-Regular';
   color: #2F2D2C;
 `;
+
+export const Discount = styled(View)`
+  width: 100%;
+  height: 56px;
+  border-width: 2px;
+  border-color: #EAEAEA;
+  border-style: solid;
+  border-radius: 14px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-horizontal: 15px;
+`;
+
+export const DiscountText = styled(Text)`
+  font-size: 18px;
+  font-family: 'Sora-SemiBold';
+  color: #2F2D2C;
+`;
