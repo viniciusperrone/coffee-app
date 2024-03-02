@@ -6,10 +6,10 @@ import { HomeIcon } from "@/assets/icons/tabs/home";
 import { HeartIcon } from "@/assets/icons/tabs/heart";
 import { BagIcon } from "@/assets/icons/tabs/bag";
 import { NotificationIcon } from "@/assets/icons/tabs/notification";
-import { Favorites } from "@/screens/favorites";
-import { Cart } from "@/screens/cart";
-import { Notifications } from "@/screens/notifications";
-import { Dashboard } from "@/screens/dashboard";
+import { FavoritesPage } from "@/screens/favorites";
+import { CartPage } from "@/screens/cart";
+import { NotificationsPage } from "@/screens/notifications";
+import { DashboardPage } from "@/screens/dashboard";
 
 // ----------------------------------------------------------------------
 
@@ -41,7 +41,7 @@ export function TabsRoutes() {
     >
       <Tab.Screen 
         name="dashboard"
-        component={Dashboard}
+        component={DashboardPage}
         options={{
           tabBarShowLabel: false,
           tabBarIcon: ({ focused }) => (
@@ -56,7 +56,7 @@ export function TabsRoutes() {
       />
       <Tab.Screen 
         name="favorites"
-        component={Favorites}
+        component={FavoritesPage}
         options={{
           tabBarShowLabel: false,
           tabBarIcon: ({ focused }) => (
@@ -71,7 +71,7 @@ export function TabsRoutes() {
       />
       <Tab.Screen 
         name="cart"
-        component={Cart}
+        component={CartPage}
         options={{
           tabBarShowLabel: false,
           tabBarIcon: ({ focused }) => (
@@ -86,7 +86,7 @@ export function TabsRoutes() {
       />
       <Tab.Screen 
         name="notifications"
-        component={Notifications}
+        component={NotificationsPage}
         options={{
           tabBarShowLabel: false,
           tabBarIcon: ({ focused }) => (

@@ -2,8 +2,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import { RootPage } from "@/screens/root";
 import { TabsRoutes } from "./tabs.routes";
-import { DetailProduct } from "@/screens/detail-product";
-import { Order } from "@/screens/order";
+import { DetailProductPage } from "@/screens/detail-product";
+import { OrderPage } from "@/screens/order";
 
 // ----------------------------------------------------------------------
 
@@ -22,11 +22,11 @@ export function StackRoutes() {
       />
       <Stack.Screen
         name="detail-product"
-        component={DetailProduct}
+        component={DetailProductPage}
       />
       <Stack.Screen
         name="order"
-        component={Order}
+        component={OrderPage}
       />
     </Stack.Navigator>
   )
