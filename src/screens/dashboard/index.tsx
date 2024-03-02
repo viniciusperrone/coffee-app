@@ -22,13 +22,13 @@ import { CategoryNav } from "@/components/CategoryNav";
 import { CardProduct } from "@/components/CardProduct";
 
 import { _categories } from "@/_mocks/categories";
-import { StackNavigation } from "@/navigation/routes";
+import { ScreensNavigation } from "@/navigation/routes";
 
 const DEFAULT_CATEGORY_SELECTED = _categories[0].name;
 
 export function Dashboard() {
   const [category, setCategory] = useState<string>(DEFAULT_CATEGORY_SELECTED);
-  const navigation = useNavigation<StackNavigation>();
+  const navigation = useNavigation<ScreensNavigation>();
 
   return(
     <Wrapper>

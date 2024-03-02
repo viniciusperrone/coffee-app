@@ -2,7 +2,7 @@ import { useRef, useEffect } from "react"
 import { useNavigation } from "@react-navigation/native";
 
 import { Header } from "@/components/Header";
-import { StackNavigation } from "@/navigation/routes";
+import { ScreensNavigation } from "@/navigation/routes";
 import { useBoolean } from "@/hooks/use-boolean";
 import { HeartIcon } from "@/assets/icons/heart";
 import { StartIcon } from "@/assets/icons/star";
@@ -32,7 +32,7 @@ import {
 
 export function DetailProduct() {
   const favorite = useBoolean();
-  const navigation = useNavigation<StackNavigation>();
+  const navigation = useNavigation<ScreensNavigation>();
 
   return(
     <Wrapper>

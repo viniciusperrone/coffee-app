@@ -1,11 +1,11 @@
 import { useNavigation } from "@react-navigation/native";
 
-import { StackNavigation } from "@/navigation/stack.routes";
+import { ScreensNavigation } from "@/navigation/stack.routes";
 
 import { Wrapper, Content, Title, Description, Button, TextButton } from "./style";
 
 export function RootPage() {
-  const navigation = useNavigation<StackNavigation>();
+  const navigation = useNavigation<ScreensNavigation>();
 
   return(
     <Wrapper 
