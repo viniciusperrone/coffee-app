@@ -7,7 +7,7 @@ import {
 } from "react-native";
 import styled from "styled-components/native";
 
-import { TCategory } from "@/types/category";
+// ----------------------------------------------------------------------
 
 export const Wrapper = styled(SafeAreaView)`
   flex: 1;

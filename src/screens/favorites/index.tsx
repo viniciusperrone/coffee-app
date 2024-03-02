@@ -5,6 +5,8 @@ import { Hidden } from "@/components/Hidden";
 
 import { Wrapper } from "./style";
 
+// ----------------------------------------------------------------------
+
 export function Favorites() {
   const navigation = useNavigation();
 

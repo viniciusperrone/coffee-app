@@ -1,4 +1,3 @@
-import { useRef, useEffect } from "react"
 import { useNavigation } from "@react-navigation/native";
 
 import { Header } from "@/components/Header";

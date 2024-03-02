@@ -24,6 +24,8 @@ import { CardProduct } from "@/components/CardProduct";
 import { _categories } from "@/_mocks/categories";
 import { ScreensNavigation } from "@/navigation/routes";
 
+// ----------------------------------------------------------------------
+
 const DEFAULT_CATEGORY_SELECTED = _categories[0].name;
 
 export function Dashboard() {

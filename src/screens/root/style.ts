@@ -1,5 +1,8 @@
-import { ImageBackground, View, Text, TouchableOpacity } from "react-native";
 import styled from "styled-components/native";
+
+import { ImageBackground, View, Text, TouchableOpacity } from "react-native";
+
+// ----------------------------------------------------------------------
 
 export const Wrapper = styled(ImageBackground)`
   flex: 1;

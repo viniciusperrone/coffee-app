@@ -5,6 +5,8 @@ import { Hidden } from "@/components/Hidden";
 
 import { Wrapper } from "./style";
 
+// ----------------------------------------------------------------------
+
 export function Notifications() {
   const navigation = useNavigation();
 
@@ -15,7 +17,6 @@ export function Notifications() {
         onBack={navigation.goBack}
         rightComponent={<Hidden />}
       />
-
     </Wrapper>
   )
 }
