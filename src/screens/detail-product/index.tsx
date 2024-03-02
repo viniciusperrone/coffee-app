@@ -29,7 +29,7 @@ import {
 
 // ----------------------------------------------------------------------
 
-export function DetailProduct() {
+export function DetailProductPage() {
   const favorite = useBoolean();
   const navigation = useNavigation<ScreensNavigation>();
 

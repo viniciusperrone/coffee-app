@@ -7,7 +7,7 @@ import { Wrapper } from "./style";
 
 // ----------------------------------------------------------------------
 
-export function Cart() {
+export function CartPage() {
   const navigation = useNavigation();
 
   return(

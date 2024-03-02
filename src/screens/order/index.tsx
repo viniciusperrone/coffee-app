@@ -27,7 +27,7 @@ import { CashIcon } from "@/assets/icons/cash";
 
 // ----------------------------------------------------------------------
 
-export function Order() {
+export function OrderPage() {
   const navigation = useNavigation();
 
   const renderBottomSheet = (

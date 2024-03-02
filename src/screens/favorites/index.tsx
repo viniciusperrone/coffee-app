@@ -7,7 +7,7 @@ import { Wrapper } from "./style";
 
 // ----------------------------------------------------------------------
 
-export function Favorites() {
+export function FavoritesPage() {
   const navigation = useNavigation();
 
   return(

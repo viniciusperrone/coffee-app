@@ -28,7 +28,7 @@ import { ScreensNavigation } from "@/navigation/routes";
 
 const DEFAULT_CATEGORY_SELECTED = _categories[0].name;
 
-export function Dashboard() {
+export function DashboardPage() {
   const [category, setCategory] = useState<string>(DEFAULT_CATEGORY_SELECTED);
   const navigation = useNavigation<ScreensNavigation>();
 

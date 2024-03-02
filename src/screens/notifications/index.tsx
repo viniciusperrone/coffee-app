@@ -7,7 +7,7 @@ import { Wrapper } from "./style";
 
 // ----------------------------------------------------------------------
 
-export function Notifications() {
+export function NotificationsPage() {
   const navigation = useNavigation();
 
   return(
