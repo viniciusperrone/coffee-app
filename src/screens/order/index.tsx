@@ -15,7 +15,13 @@ import {
   LargeText,
   BottomSheet,
   BottomSheetButton,
-  BottomSheetTextButton
+  BottomSheetTextButton,
+  DotsContainer,
+  Dots,
+  CashContainer,
+  CashBox,
+  CashPriceText,
+  CashPriceTextSecondary
 } from "./style";
 import { CashIcon } from "@/assets/icons/cash";
 
@@ -83,10 +89,33 @@ export function Order() {
           </Row>
         </Column>
         <BottomSheet>
-          <Row>
-            <CashIcon 
-              
-            />
+          <Row 
+            style={{ 
+              width: '100%',
+              justifyContent: 'space-between',
+              alignItems: 'center'
+            }}
+          >
+            <Row style={{ gap: 10, alignItems: 'center' }}>
+              <CashIcon />
+              <CashContainer>
+                <CashBox>
+                  <CashPriceText>
+                    Cash
+                  </CashPriceText>
+                </CashBox>
+                <Row style={{ width: 62, justifyContent: 'center' }}>
+                  <CashPriceTextSecondary>
+                    $ 5.53
+                  </CashPriceTextSecondary>
+                </Row>
+              </CashContainer>
+            </Row>
+            <DotsContainer>
+              <Dots />
+              <Dots />
+              <Dots />
+            </DotsContainer>
           </Row>
           <BottomSheetButton>
             <BottomSheetTextButton>

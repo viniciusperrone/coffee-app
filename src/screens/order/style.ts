@@ -102,3 +102,50 @@ export const BottomSheetTextButton = styled(Text)`
   font-family: 'Sora-SemiBold';
   color: white;
 `;
+
+export const DotsContainer = styled(View)`
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  background-color: #808080;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+`;
+
+export const Dots = styled(View)`
+  width: 3px;
+  height: 3px;
+  background-color: white;
+`;
+
+export const CashContainer = styled(View)`
+  width: 112px;
+  height: 24px;
+  border-radius: 20px;
+  background-color: #F6F6F6;
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const CashBox= styled(View)`
+  width: 50px;
+  height: 100%;
+  border-radius: 20px;
+  background-color: #C67C4E;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const CashPriceText = styled(Text)`
+  font-size: 14px;
+  font-family: 'Sora-Regular';
+  color: white;
+`;
+
+export const CashPriceTextSecondary = styled(Text)`
+  font-size: 14px;
+  font-family: 'Sora-Regular';
+  color: #2F2D2C;
+`;
