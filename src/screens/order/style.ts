@@ -35,8 +35,8 @@ export const SubHeading = styled(Text)`
 
 export const ThinText = styled(Text)`
   font-size: 14px;
-  font-family: 'Sora-SemiBold';
-  color: #2F2D2C;
+  font-family: 'Sora-Light';
+  color: #808080;
 `;
 
 export const LargeText = styled(Text)`
@@ -206,4 +206,22 @@ export const ItemOrderCircleButton = styled(Pressable)`
   border-radius: 100%;
   align-items: center;
   justify-content: center;
+`;
+
+export const ActionButton = styled(Pressable)`
+  height: 28px;
+  padding-horizontal: 10px;
+  border: 1px solid #EAEAEA;
+  border-radius: 16px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+`;
+
+export const ActionText = styled(Text)`
+  font-size: 14px;
+  font-family: 'Sora-Regular';
+  color: #303336;
+
 `;

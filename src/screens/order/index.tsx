@@ -17,6 +17,7 @@ import {
   SubHeading,
   NormalText,
   LargeText,
+  ThinText,
   BottomSheet,
   BottomSheetButton,
   BottomSheetTextButton,
@@ -33,8 +34,12 @@ import {
   ItemOrderTitle,
   ItemOrderSubtitle,
   ItemOrderCircleButton,
-  ItemOrderValueText
+  ItemOrderValueText,
+  ActionButton,
+  ActionText
 } from "./style";
+import { EditIcon } from "@/assets/icons/edit";
+import { NoteIcon } from "@/assets/icons/note";
 
 // ----------------------------------------------------------------------
 
@@ -96,6 +101,19 @@ export function OrderPage() {
         >
           <Heading>Delivery Address</Heading>
           <SubHeading>Jl. Kpg Sutoyo</SubHeading>
+          <ThinText>Kpg. Sutoyo No. 620, Bilzen, Tanjungbalai.</ThinText>
+          <Row style={{ gap: 10 }}>
+            <ActionButton>
+              <EditIcon />
+              <ActionText>Edit Address</ActionText>
+            </ActionButton>
+            <ActionButton>
+              <NoteIcon />
+              <ActionText>
+                Add Note
+              </ActionText>
+            </ActionButton>
+          </Row>
           <Divider />
           <Item />
         </Column>
