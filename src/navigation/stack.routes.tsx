@@ -1,9 +1,10 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import { RootPage } from "@/screens/root";
 import { TabsRoutes } from "./tabs.routes";
+import { RootPage } from "@/screens/root";
 import { DetailProductPage } from "@/screens/detail-product";
 import { OrderPage } from "@/screens/order";
+import { DeliveryPage } from "@/screens/delivery";
 
 // ----------------------------------------------------------------------
 
@@ -27,6 +28,10 @@ export function StackRoutes() {
       <Stack.Screen
         name="order"
         component={OrderPage}
+      />
+      <Stack.Screen
+        name="delivery"
+        component={DeliveryPage}
       />
     </Stack.Navigator>
   )

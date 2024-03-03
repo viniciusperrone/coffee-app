@@ -2,9 +2,13 @@ import { useNavigation } from "@react-navigation/native";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import Entypo from "react-native-vector-icons/Entypo";
 
+import { ScreensNavigation } from "@/navigation/routes";
 import { Header } from "@/components/Header";
+
 import { CashIcon } from "@/assets/icons/cash";
 import { DiscountIcon } from "@/assets/icons/discount";
+import { EditIcon } from "@/assets/icons/edit";
+import { NoteIcon } from "@/assets/icons/note";
 
 import { 
   Wrapper, 
@@ -38,13 +42,11 @@ import {
   ActionButton,
   ActionText
 } from "./style";
-import { EditIcon } from "@/assets/icons/edit";
-import { NoteIcon } from "@/assets/icons/note";
 
 // ----------------------------------------------------------------------
 
 export function OrderPage() {
-  const navigation = useNavigation();
+  const navigation = useNavigation<ScreensNavigation>();
 
   const renderBottomSheet = (
     <BottomSheet>
@@ -76,7 +78,9 @@ export function OrderPage() {
           <Dots />
         </DotsContainer>
       </Row>
-      <BottomSheetButton>
+      <BottomSheetButton 
+        onPress={() => navigation.navigate("delivery")}
+      >
         <BottomSheetTextButton>
           Order
         </BottomSheetTextButton>
