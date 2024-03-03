@@ -2,9 +2,20 @@ import { SafeAreaView } from "react-native";
 import MapView from 'react-native-maps';
 
 import AntDesign from "react-native-vector-icons/AntDesign";
-
-import { Wrapper, Content, FloatingButton, Row } from "./style";
 import { GpsIcon } from '@/assets/icons/gps';
+
+import { 
+  Wrapper, 
+  Content, 
+  FloatingButton, 
+  Row, 
+  BottomSheet, 
+  BottomSheetHeader,
+  Heading,
+  SubHeading,
+  SimpleText,
+  SimpleTextBold
+} from "./style";
 
 export function DeliveryPage() {
   return(
@@ -43,6 +54,19 @@ export function DeliveryPage() {
             </FloatingButton>
           </Row>
         </Content>
+        <BottomSheet>
+          <BottomSheetHeader>
+            <Heading>10 minutes left</Heading>
+            <Row style={{ gap: 2 }}>
+              <SimpleText>
+                Delivery to
+              </SimpleText>
+              <SimpleTextBold>
+                Jl. Kpg Sutoyo
+              </SimpleTextBold>
+            </Row>
+          </BottomSheetHeader>
+        </BottomSheet>
       </SafeAreaView>
     </Wrapper>
   )
