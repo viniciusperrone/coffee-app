@@ -2,6 +2,7 @@ import { SafeAreaView } from "react-native";
 import MapView from 'react-native-maps';
 
 import AntDesign from "react-native-vector-icons/AntDesign";
+import FontAwesome from "react-native-vector-icons/FontAwesome";
 import { GpsIcon } from '@/assets/icons/gps';
 
 import { 
@@ -9,12 +10,17 @@ import {
   Content, 
   FloatingButton, 
   Row, 
+  Column,
   BottomSheet, 
   BottomSheetHeader,
+  BottomSheetContent,
   Heading,
   SubHeading,
   SimpleText,
-  SimpleTextBold
+  SimpleTextBold,
+  Progress,
+  Box,
+  SquareIcon
 } from "./style";
 
 export function DeliveryPage() {
@@ -66,6 +72,36 @@ export function DeliveryPage() {
               </SimpleTextBold>
             </Row>
           </BottomSheetHeader>
+          <BottomSheetContent>
+            <Row 
+              style={{ 
+                width : '100%', 
+                gap: 10
+              }}
+            >
+              <Progress color="#36C07E" />
+              <Progress color="#36C07E" />
+              <Progress color="#36C07E" />
+              <Progress color="#DFDFDF" />
+            </Row>
+
+            <Box>
+              <SquareIcon>
+                <FontAwesome 
+                  name="motorcycle"
+                  color="#C67C4E"
+                  size={25}
+                />
+              </SquareIcon>
+              <Column style={{ gap: 10 }}>
+                <SubHeading>Delivered your order</SubHeading>
+                <SimpleText>
+                  We deliver your goods to you in {'\n'} 
+                  the shortes possible time.
+                </SimpleText>
+              </Column>
+            </Box>
+          </BottomSheetContent>
         </BottomSheet>
       </SafeAreaView>
     </Wrapper>

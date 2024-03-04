@@ -4,6 +4,13 @@ import { View, Pressable, Dimensions, Text } from "react-native";
 
 // ----------------------------------------------------------------------
 
+type ProgressProps = {
+  color: string;
+};
+
+
+// ----------------------------------------------------------------------
+
 export const Wrapper = styled(View)`
   flex: 1;
 `;
@@ -19,6 +26,10 @@ export const Content = styled(View)`
 
 export const Row = styled(View)`
   flex-direction: row;
+`;
+
+export const Column = styled(View)`
+  flex-direction: column;
 `;
 
 export const FloatingButton = styled(Pressable)`
@@ -48,6 +59,30 @@ export const BottomSheetHeader = styled(View)`
   gap: 10px;
 `;
 
+export const BottomSheetContent = styled(View)`
+  padding-vertical: 10px;
+  gap: 15px;
+`;
+
+export const Box = styled(View)`
+  width: 100%;
+  border: 1px solid #DEDEDE; 
+  border-radius: 14px;
+  flex-direction: row;
+  gap: 15px;
+  padding-horizontal: 15px;
+  padding-vertical: 15px;
+`;
+
+export const SquareIcon = styled(View)`
+  width: 62px;
+  height: 62px;
+  border: 1px solid #DEDEDE; 
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const Heading = styled(Text)`
   font-size: 20px;
   font-family: 'Sora-SemiBold';
@@ -70,4 +105,11 @@ export const SimpleTextBold = styled(Text)`
   font-size: 12px;
   font-family: 'Sora-SemiBold';
   color: #303336;
+`;
+
+export const Progress = styled(View)<ProgressProps>`
+  width: ${() => (Dimensions.get("window").width - 90) / 4};
+  background-color: ${props => props.color};
+  height: 4px;
+  border-radius: 20px;
 `;
