@@ -20,13 +20,17 @@ import {
   SimpleTextBold,
   Progress,
   Box,
-  SquareIcon
+  SquareIcon,
+  CallButton,
+  AvatarDeliver
 } from "./style";
+import { CallIcon } from "@/assets/icons/call";
 
 export function DeliveryPage() {
   return(
     <Wrapper>
       <MapView
+        zoomEnabled={false}
         initialRegion={{
           latitude: -25.4284,
           longitude: -49.2733,
@@ -101,6 +105,24 @@ export function DeliveryPage() {
                 </SimpleText>
               </Column>
             </Box>
+            <Row style={{ justifyContent: 'space-between' }}>
+              <Row style={{ gap: 10 }}>
+                <AvatarDeliver 
+                  source={require("@/assets/images/deliveryman.png")}
+                />
+                <Column>
+                  <SubHeading>
+                    Johan Hawn
+                  </SubHeading>
+                  <SimpleText>
+                    Personal Courier
+                  </SimpleText>
+                </Column>
+              </Row>
+              <CallButton>
+                <CallIcon />
+              </CallButton>
+            </Row>
           </BottomSheetContent>
         </BottomSheet>
       </SafeAreaView>

@@ -1,6 +1,6 @@
 import styled from "styled-components/native";
 
-import { View, Pressable, Dimensions, Text } from "react-native";
+import { View, Pressable, Dimensions, Text, Image } from "react-native";
 
 // ----------------------------------------------------------------------
 
@@ -113,3 +113,14 @@ export const Progress = styled(View)<ProgressProps>`
   height: 4px;
   border-radius: 20px;
 `;
+
+export const CallButton = styled(Pressable)`
+  height: 54px;
+  width: 54px;
+  border: 1px solid #DEDEDE;
+  border-radius: 14px;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const AvatarDeliver = styled(Image)``;
